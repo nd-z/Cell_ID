@@ -1,0 +1,19 @@
+athelas classifier plan
+
+types: Neutrophils,	Lymphocytes, Basophils, Eosinophils, Monocytes
+
+can probably use a decision tree first; SVM later?
+
+1. threshold the image (everything that isnt blueish purple or bright pink should be set to black) RGB 150,140, 210
+2. contour? or find objects in the image
+3. if #contours > 1 --> NEUTROPHIL or MONOCYTE or LYMPHOCYTE
+		-how the fuck do i do this lmao
+4. if #contours = 1 --> could be BASOPHIL or ESINOPHIL
+		-ESINOPHILs have those weird pink dots. should i keep the dots out of the thresholding?
+
+5. 
+
+-----
+Notes
+-----
+Problem: Still need to be able to tell when there are two or more different white cells in the same image. Bounding boxes?
